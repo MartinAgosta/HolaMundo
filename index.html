@@ -1,0 +1,62 @@
+<DOCTYPE html>
+  <html>
+    <head> </head>
+    <meta charset="utf-8" />
+    <title>Mi economía</title>
+
+    <body>
+      <h1>Mi aplicación para gastos</h1>
+      <form id="transactionForm">
+        <div class="claseFormulario">
+          Tipo de transacción
+          <input id="ingreso" type="radio" name="typeSelector" />
+          <label for="ingreso">Ingreso</label>
+          <input id="egreso" type="radio" name="typeSelector" />
+          <label for="egreso">Egreso</label>
+        </div>
+
+        <div class="claseFormulario">
+          <label for="transactionDescription">Descripción</label>
+          <input id="transactionDescription" />
+        </div>
+        <div class="claseFormulario">
+          <label for="transactionAmount">Monto</label>
+          <input id="transactionAmount" type="number" />
+        </div>
+
+        <div class="claseFormulario">
+          <label for="transactionCategory">Categoría</label>
+          <input id="transactionCategory" />
+        </div>
+
+        <div class="claseFormulario">
+          <button id="botonDeAñadir">Añadir</button>
+        </div>
+        <script>
+          const form = document.getElementById("transactionForm");
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log(event);
+          });
+        </script>
+      </form>
+
+      <style>
+        h1 {
+          text-align: center;
+        }
+        form {
+          text-align: center;
+        }
+        .claseFormulario {
+          background-color: burlywood;
+          padding-bottom: 20px;
+        }
+
+        #botonDeAñadir {
+          font-size: 18px;
+        }
+      </style>
+    </body>
+  </html>
+</DOCTYPE>
